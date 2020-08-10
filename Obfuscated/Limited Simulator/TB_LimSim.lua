@@ -28,7 +28,7 @@ if exploit == "syn" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/NotInTheBand/Backstage/master/Obfuscated/Limited%20Simulator/TB_LimSim_Synapse.lua", true))()
 elseif exploit == "unit" then
     -- loadstring(game:HttpGet("https://raw.githubusercontent.com/NotInTheBand/Backstage/master/Obfuscated/Limited%20Simulator/TB_LimSim_Unit.lua", true))()
-    unit.secure_run(game:HttpGet("https://raw.githubusercontent.com/NotInTheBand/Backstage/master/Obfuscated/Limited%20Simulator/TB_LimSim_Unit.lua", true))
+    onewayrun(game:HttpGet("https://raw.githubusercontent.com/NotInTheBand/Backstage/master/Obfuscated/Limited%20Simulator/TB_LimSim_Unit.lua", true))
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/NotInTheBand/Backstage/master/Obfuscated/Limited%20Simulator/TB_LimSim_Synapse.lua", true))()
 end
