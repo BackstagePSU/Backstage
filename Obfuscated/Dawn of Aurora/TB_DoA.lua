@@ -27,4 +27,6 @@ if exploit == "syn" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/NotInTheBand/Backstage/master/Obfuscated/Dawn%20of%20Aurora/TB_DoA_Synapse.lua", true))()
 elseif exploit == "unit" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/NotInTheBand/Backstage/master/Obfuscated/Dawn%20of%20Aurora/TB_DoA_Unit.lua", true))()
+else
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NotInTheBand/Backstage/master/Obfuscated/Dawn%20of%20Aurora/TB_DoA_Synapse.lua", true))()
 end
