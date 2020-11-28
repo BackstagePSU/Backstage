@@ -50,6 +50,7 @@ spawn(function()
 end)
 
 function library:Create(class, properties)
+	properties = typeof(properties) == "table" and properties or {}
 	local inst = Instance.new(class)
 	for property, value in next, properties do
 		inst[property] = value
@@ -1607,9 +1608,16 @@ local UIToggle
 local UnlockMouse
 function library:Init()
 	
-	self.base = self.base or self:Create("ScreenGui", {
-		Parent = game.CoreGui
-	})
+	self.base = self.base or self:Create("ScreenGui")
+	if syn and syn.protect_gui then
+		syn.protect_gui(self.base)
+	elseif get_hidden_gui then
+		get_hidden_gui(self.base)
+	else
+		game:GetService"Players".LocalPlayer:Kick("Error: protect_gui function not found")
+		return
+	end
+	self.base.Parent = game:GetService("CoreGui")
 	
 	self.cursor = self.cursor or self:Create("Frame", {
 		ZIndex = 100,
